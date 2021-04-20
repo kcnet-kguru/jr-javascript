@@ -4,16 +4,16 @@
 
 1. git을 다운받아 설치 합니다. [:link:](https://git-scm.com/downloads)
 
-2. github 사이트를 가서 회원 가입을 하고 관리자에게 계정을 알려줍니다.
+2. 깃허브에 가입을 합니다.
 
-3. 승인 되었다는 메세지를 받으면, 가입한 이메일로 가서 초대 메일에 승인을 클릭합니다.
-
+2. 가입 후 우측상단의 fork를 눌러 본인의 repository로 fork 합니다.
+   
 4. cmd 창에서 작업하기를 원하는 폴더로 이동 후 다음과 같이 입력합니다.
 ```
-$ git clone https://github.com/kcnet-kguru/jr-javascript
+$ git clone <fork 한 url>
 ```
 
-5. cmd 창에서 브랜치를 생성합니다.
+5. cmd 창에서 브랜치를 본인의 계정으로 생성합니다.
 ```
 $ git branch <branchname>
 $ git checkout <branchname>
@@ -38,7 +38,5 @@ $ git commit -m 'Day 퀴즈 완료'
 ![ex_screenshot](./images/pull_request.png)
 
 9. `New pull request` 버튼을 클릭하여, `pull request` 생성하고, `create pull request`를 클릭하여 `pull request`를 합니다.
-
-10.   추후에 코드리뷰를 확인합니다.
 
 ![ex_screenshot](./images/unnamed.jpg)
