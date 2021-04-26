@@ -17,6 +17,22 @@
         //     One array will be of string characters (in lower case, a-z), a second of integers (all positive starting at 1).
         function mergeArrays(a, b) {
             // your code here
+            var array=[];
+            var len = 0;
+            if(a.length<b.length){
+                len = b.length;
+            } else {
+                len = a.length;
+            }
+            for(i=0;i<len;i++){
+                if(a.length>i){
+                    array.push(a[i]);
+                }
+                if(b.length>i){
+                    array.push(b[i]);
+                }
+            }
+            return array;
         }
         console.log(mergeArrays(['a', 'b', 'c', 'd', 'e'],  [1, 2, 3, 4, 5] ));
         console.log(mergeArrays([1, 2, 3], ['a', 'b', 'c', 'd', 'e', 'f'] ));
