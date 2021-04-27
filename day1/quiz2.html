@@ -16,6 +16,12 @@
 
         function createArrayOfTiers(num) {
             // TODO: 이곳에 함수를 작성하세요
+            var input = num.toString();
+            var result;
+            for(var i=1; i<input.length; i++){
+                result.push(input.substring(0,i));
+            }
+            return result;
         }
 
         console.log(createArrayOfTiers(420));
