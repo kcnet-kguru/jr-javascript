@@ -16,8 +16,12 @@
     // 9*0 + 8*2 +7*4 +6*5 = 74
 
     function minSum(arr) {
-      return 0;
+      const reducer = (accumulator, currentVaule) => accumulator + currentVaule;
+      return arr.sort(function (a,b) {return a-b;}).map(function (x,i) {return x * arr[arr.length-1-i];}).slice(0,arr.length / 2).reduce(reducer);
     }
+    console.log(minSum([5,4,2,3]));
+    console.log(minSum([12,6,10,26,3,24]));
+    console.log(minSum([9,2,8,7,5,4,0,6]));
   </script>
 </head>
 <body>
