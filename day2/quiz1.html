@@ -18,8 +18,22 @@
         // maxProduct ([10, 3, -1, -27] , 3)  return (-30)
         // 10 * 3 * -1 = -30
         function maxProduct(obj, k) {
-            return 0;
+            obj.sort(function(a, b){
+                if(a > b) return 1;
+                if(a === b) return 0;
+                if(a < b) return -1;
+            });
+            var result =1;
+            for(var i=0; i<k; i++){
+                result = result * obj.pop();
+            }
+            return result;
         }
+
+        console.log(maxProduct([4,3,5], 2));
+        console.log(maxProduct([8, 10 , 9, 7], 3));
+        console.log(maxProduct([10, 8, 3, 2, 1, 4, 10], 5));
+        console.log(maxProduct ([10, 3, -1, -27] , 3));
     </script>
 </head>
 <body>

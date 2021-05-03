@@ -16,8 +16,26 @@
     // 9*0 + 8*2 +7*4 +6*5 = 74
 
     function minSum(arr) {
-      return 0;
+        arr.sort(function(a, b){
+            if(a > b) return 1;
+            if(a === b) return 0;
+            if(a < b) return -1;
+        });
+        var result = 0;
+        for(var i=0; i<(arr.length -1)/2.0; i++){
+            if(i === (arr.length-1)/2){
+                result += arr[i];
+            }else{
+                result += arr[i] * arr[arr.length-1 - i];
+            }
+        }
+      return result;
     }
+
+    console.log(minSum([5,4,2,3]));
+    console.log(minSum([12,6,10,26,3,24]));
+    console.log(minSum([9,2,8,7,5,4,0,6]));
+    console.log(minSum([9,2,8,7,5,4,0]));
   </script>
 </head>
 <body>
