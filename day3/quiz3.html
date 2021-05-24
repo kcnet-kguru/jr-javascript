@@ -10,9 +10,17 @@
       // productArray ([1,5,2]) ==> return {10,2,5}
       // productArray ([10,3,5,6,2]) return ==> {180,600,360,300,900}
       function productArray(arr) {
-        // code
-        return;
+        var prod = arr.reduce(function(acc, cur){
+           return acc * cur;
+        });
+        return arr.map(function(obj){
+            return prod / obj;
+        });
+        return prod;
       }
+      console.log(productArray([12,20]));
+      console.log(productArray([1,5,2]));
+      console.log(productArray([10,3,5,6,2]));
     </script>
 </head>
 <body>
