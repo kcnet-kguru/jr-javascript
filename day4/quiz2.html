@@ -9,8 +9,22 @@
       // 주어진 문자열이 판그램일 경우 True 를 리턴하고 아닐 경우 False를 리턴하는 함수를 작성하시오.
       // 숫자 및 구두점을 무시합니다.
       function is_pangram(s) {
-
+          var splitS = s.toUpperCase().split("");
+          var resultSet = new Set();
+          splitS.forEach(function(obj, idx){
+              if(obj != " "){
+                  resultSet.add(obj);
+              }
+          });
+          if(resultSet.size != 26){
+              return false;
+          }else{
+              return true;
+          }
       }
+
+      console.log(is_pangram("The quick brown fox jumps over the lazy dog"));
+      console.log(is_pangram("The quick brown fox jumps over the dog"));
     </script>
 </head>
 <body>
