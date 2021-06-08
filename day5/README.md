@@ -106,3 +106,4 @@ newSports.get();
 
 ### prototype
 * prototype에 arrow 함수를 연결하면 화살표 함수 블록에서 this가 인스턴스를 참조하지 못합니다.
+<br/>[참고]: https://kim-solshar.tistory.com/42
