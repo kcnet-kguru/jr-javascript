@@ -18,8 +18,13 @@
         // maxProduct ([10, 3, -1, -27] , 3)  return (-30)
         // 10 * 3 * -1 = -30
         function maxProduct(obj, k) {
-            return 0;
+            const reducer = (accumulator, currentVaule) => accumulator * currentVaule;
+            return obj.sort(function (a,b) {return b-a;}).slice(0,k).reduce(reducer);
         }
+        console.log(maxProduct ([4, 3, 5], 2));
+        console.log(maxProduct ([8, 10 , 9, 7], 3));
+        console.log(maxProduct([10, 8, 3, 2, 1, 4, 10], 5));
+        console.log(maxProduct ([10, 3, -1, -27] , 3));
     </script>
 </head>
 <body>
