@@ -11,8 +11,18 @@
       // ["AS", "3S", "9S", "KS", "4S"]  ==> true
       // ["AD", "4S", "7H", "KS", "10S"] ==> false
       function isFlush(cards) {
-        return true || false ;
+          var result = true;
+          for(var i=0; i<cards.length-2; i++){
+              if(cards[i].charAt(1) != cards[i+1].charAt(1)){
+                  result = false;
+              }
+          }
+          return result;
       }
+      var case1 = ["AS", "3S", "9S", "KS", "4S"];
+      var case2 =  ["AD", "4S", "7H", "KS", "10S"];
+      console.log(isFlush(case1));
+      console.log(isFlush(case2));
     </script>
     <title>Title</title>
 </head>

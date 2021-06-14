@@ -9,8 +9,21 @@
     // 만약 세사람일 경우의 결과는 [5, 7, 3] 이다.
     // 리스트에서 값을 가져가는 형태이므로 리스트보다 사람 수가 많을 경우 값을 가져가지 못할 경우에는 0을 리턴한다.
     function beggars(values, n) {
+        var sortedValues = values.reverse();
+        var result = [];
+        for(var i = 0; i< n; i++){
+            result.push(0);
+        }
 
+        sortedValues.forEach(function (obj, idx){
+            result[idx%n] = result[idx%n] + obj;
+        });
+        return result;
     }
+
+    console.log(beggars([1, 2, 3, 4, 5], 2));
+    console.log(beggars([1, 2, 3, 4, 5], 3));
+    console.log(beggars([1, 2, 3, 4, 5], 6));
   </script>
 </head>
 <body>

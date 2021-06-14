@@ -10,9 +10,21 @@
 
         function diffBig2(arr) {
             // code
-            return
+            var max = Number.MIN_SAFE_INTEGER;
+            var secondMax = Number.MIN_SAFE_INTEGER;
+            arr.forEach(function (obj, idx){
+               if(obj > max){
+                   secondMax = max;
+                   max = obj;
+               }else if(obj > secondMax){
+                   secondMax = obj
+               }
+            });
+            return max - secondMax
         }
 
+        console.log(diffBig2([10,5,2]));
+        console.log(diffBig2([10,2,5,19,13,1]));
     </script>
     <title>Title</title>
 </head>
